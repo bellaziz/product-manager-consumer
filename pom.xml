@@ -10,9 +10,9 @@
     <relativePath/> <!-- lookup parent from repository -->
   </parent>
   <groupId>com.disney</groupId>
-  <artifactId>product-manager-consumer</artifactId>
+  <artifactId>ticket-linking-consumer</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>product-manager-consumer</name>
+  <name>ticket-linking-consumer</name>
   <description>Demo project for PACT</description>
   <properties>
     <java.version>11</java.version>

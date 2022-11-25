@@ -4,9 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProductManagerConsumerApplication {
+public class TicketLinkingConsumerApplication {
 
   public static void main(String[] args) {
-    SpringApplication.run(ProductManagerConsumerApplication.class, args);
+    SpringApplication.run(TicketLinkingConsumerApplication.class, args);
   }
 }
