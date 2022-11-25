@@ -9,26 +9,24 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 @Component
-public class ProductProviderRestClient {
+public class ProductProviderClient {
 
   private RestTemplate restTemplate;
 
-  @Value("${product.provider.fetch.all.products}")
-  private String allProductsUrl;
+  @Value("${product.provider.base.url}")
+  public String productServiceBaseUrl;
 
-  @Value("${product.provider.fetch.product}")
-  private String productByIdUrl;
 
-  public ProductProviderRestClient() {
+  public ProductProviderClient() {
     this.restTemplate = new RestTemplate();
   }
 
   public List<Product> retrieveAllProducts() {
     return Arrays.asList(
-        Objects.requireNonNull(restTemplate.getForObject(allProductsUrl, Product[].class)));
+        Objects.requireNonNull(restTemplate.getForObject(productServiceBaseUrl+"/products", Product[].class)));
   }
 
   public Product retrieveProductById(int id) {
-    return restTemplate.getForObject(productByIdUrl, Product.class, id);
+    return restTemplate.getForObject(productServiceBaseUrl+"/products/{id}", Product.class, id);
   }
 }

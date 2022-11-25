@@ -1,7 +1,7 @@
 package com.disney.service;
 
 import com.disney.model.Product;
-import com.disney.restclient.ProductProviderRestClient;
+import com.disney.restclient.ProductProviderClient;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -9,10 +9,10 @@ import org.springframework.stereotype.Service;
 @Service
 public class ProductManagerService {
 
-  private ProductProviderRestClient productProviderRestClient;
+  private ProductProviderClient productProviderRestClient;
 
   @Autowired
-  public ProductManagerService(ProductProviderRestClient productProviderRestClient) {
+  public ProductManagerService(ProductProviderClient productProviderRestClient) {
     this.productProviderRestClient = productProviderRestClient;
   }
 

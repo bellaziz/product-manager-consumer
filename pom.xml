@@ -44,6 +44,12 @@
       <artifactId>springfox-swagger2</artifactId>
       <version>2.9.0</version>
     </dependency>
+    <!-- PACT dependency -->
+    <dependency>
+      <groupId>au.com.dius</groupId>
+      <artifactId>pact-jvm-consumer-junit5</artifactId>
+      <version>4.0.10</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -59,6 +65,11 @@
             </exclude>
           </excludes>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>au.com.dius.pact.provider</groupId>
+        <artifactId>maven</artifactId>
+        <version>4.1.11</version>
       </plugin>
     </plugins>
   </build>
