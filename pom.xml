@@ -67,9 +67,17 @@
         </configuration>
       </plugin>
       <plugin>
-        <groupId>au.com.dius.pact.provider</groupId>
-        <artifactId>maven</artifactId>
-        <version>4.1.11</version>
+        <groupId>au.com.dius</groupId>
+        <artifactId>pact-jvm-provider-maven_2.11</artifactId>
+        <version>3.5.5</version>
+        <configuration>
+          <pactDirectory>target/pacts</pactDirectory> <!-- Defaults to ${project.build.directory}/pacts -->
+          <pactBrokerUrl>http://localhost:9292</pactBrokerUrl>
+          <pactBrokerUsername>pact_user</pactBrokerUsername>
+          <pactBrokerPassword>pact_password</pactBrokerPassword>
+          <projectVersion>1.0.0</projectVersion> <!-- Defaults to ${project.version} -->
+          <trimSnapshot>false</trimSnapshot> <!-- Defaults to false -->
+        </configuration>
       </plugin>
     </plugins>
   </build>
